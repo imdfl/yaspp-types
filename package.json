@@ -1,6 +1,6 @@
 {
   "name": "yassp-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type definition for yaspp related apps",
   "main": "index.d.ts",
   "scripts": {
