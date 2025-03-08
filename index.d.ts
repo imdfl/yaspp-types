@@ -1,5 +1,3 @@
-
-
 export namespace YASPP {
 
 	type NavItemLocaleProps = Record<string, string>;
@@ -13,33 +11,26 @@ export namespace YASPP {
 		icon?: string;
 		target?: string;
 	}
-	
+
 	interface INavSectionData {
 		id: string;
 		locale: NavItemLocaleProps;
 		items: ReadonlyArray<string>;
 		title: string;
 	}
-	
+
 	interface INavGroupData {
 		items: ReadonlyArray<string>;
 	}
-	
-	/**
-	 * Represents the full data of a single section in a navigation list
-	 */
-	interface INavSection {
-		id: string;
-		locale: Record<string, string>;
-		items: ReadonlyArray<INavItemData>;
-		title: string;
-	}
-	
+
+
 	interface IYasppNavData {
 		readonly items: Record<string, Omit<INavItemData, "id">>;
 		readonly sections: Record<string, Omit<INavSectionData, "id">>;
 		readonly groups: Record<string, INavGroupData>;
 	}
+
+
 	interface IProjectLocaleConfig {
 		readonly langs: ReadonlyArray<string>;
 		readonly defaultLocale: string;
