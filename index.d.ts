@@ -88,11 +88,4 @@ export namespace YASPP {
 		readonly assets?: IYasppStyleConfig;
 	}
 
-	interface IYasppAppConfig extends IYasppConfig {
-		/**
-		 * Relative to yaspp root
-		 */
-		readonly root: string;
-	}
-
 }
