@@ -1,2 +1,2 @@
-# yassp-types
-type definitions for [Yaspp](https://github.com/imdfl/yaspp)
+# Yaspp Types
+Type definitions for [Yaspp](https://github.com/imdfl/yaspp)
