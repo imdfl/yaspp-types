@@ -1,0 +1,22 @@
+{
+  "name": "yassp-types",
+  "version": "1.0.0",
+  "description": "Type definition for yaspp related apps",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imdfl/yaspp-types.git"
+  },
+  "keywords": [
+    "yaspp"
+  ],
+  "author": " (David *)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imdfl/yaspp-types/issues"
+  },
+  "homepage": "https://github.com/imdfl/yaspp-types#readme"
+}
