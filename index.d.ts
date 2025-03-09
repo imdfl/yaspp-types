@@ -56,7 +56,7 @@ export namespace YASPP {
 
 	interface IYasppNavConfig {
 		/**
-		 * Path to navigation configuration file
+		 * Path to navigation configuration file, relative to the project root
 		 */
 		readonly index: string;
 
@@ -64,9 +64,10 @@ export namespace YASPP {
 
 	interface IYasppStyleConfig extends IYasppBaseConfig {
 		/**
-		 * Optional Path to main css file, relative to the style root , defaults to site.scss (generated if no css is provided by the user)
+		 * Optional Paths of css files to include in the site's pages.
+		 * The Urls are relative to the style root
 		 */
-		readonly index?: string;
+		readonly sheets?: string | string[];
 	}
 
 	type IYasppAssetsConfig = IYasppBaseConfig;
@@ -79,6 +80,9 @@ export namespace YASPP {
 		 * Content configuration
 		 */
 		readonly content: IYasppContentConfig;
+		/**
+		 * Navigation configuration - 
+		 */
 		readonly nav: IYasppNavConfig;
 		/**
 		 * Locales configuration
