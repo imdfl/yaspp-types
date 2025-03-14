@@ -30,6 +30,59 @@ export namespace YASPP {
 		readonly groups: Record<string, INavGroupData>;
 	}
 
+	/**
+	 * Result of running a process
+	 */
+	export interface IProcessOutput {
+		readonly output: ReadonlyArray<string>;
+		readonly errors: ReadonlyArray<string>;
+		readonly status: number;
+	}
+	
+	export interface IMutableProcessOptions {
+		/**
+		 * command name as typed in console
+		 */
+		exe: string;
+		/**
+		 * arguments
+		 */
+		argv: string[];
+	
+	
+		env?: {[key: string]: string };
+		/**
+		 * Optional working directory
+		 */
+		cwd?: string;
+	
+		/**
+		 * If true, log the data, if a function call it on every stdin data
+		 */
+		onData?: ((data: string) => void) | boolean;
+	
+		/**
+		 * If true, log the error, if a function call it on every stderr data
+		 */
+		onError?: ((data: string) => void) | boolean;
+	
+		/**
+		 * If true, only log the command to console
+		 */
+		dryrun?: boolean;
+		/**
+		 * Suppress output
+		 */
+		quiet?: boolean;
+	
+		/**
+		 * if a function, call periodically, if true, print '.' periodically
+		 */
+		onProgress?: (() => unknown) | boolean;
+	}
+	
+	export type IProcessOptions = Readonly<IMutableProcessOptions>;
+
 
 	interface IProjectLocaleConfig {
 		readonly langs: ReadonlyArray<string>;
