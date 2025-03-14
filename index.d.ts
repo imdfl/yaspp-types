@@ -79,6 +79,11 @@ export namespace YASPP {
 		 * if a function, call periodically, if true, print '.' periodically
 		 */
 		onProgress?: (() => unknown) | boolean;
+
+		/**
+		 * Unless `false`, run the process under a shell
+		 */
+		shell?: boolean;
 	}
 	
 	export type IProcessOptions = Readonly<IMutableProcessOptions>;
