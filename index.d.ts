@@ -126,6 +126,7 @@ export namespace YASPP {
 		 * The Urls are relative to the style root
 		 */
 		readonly sheets?: string | string[];
+		readonly classBindings?: string | string[];
 	}
 
 	type IYasppAssetsConfig = IYasppBaseConfig;
