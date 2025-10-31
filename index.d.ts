@@ -149,7 +149,7 @@ export namespace YASPP {
 		 */
 		readonly locale: IYasppLocaleConfig;
 		readonly style?: IYasppStyleConfig;
-		readonly assets?: IYasppStyleConfig;
+		readonly assets?: IYasppAssetsConfig;
 	}
 
 }
