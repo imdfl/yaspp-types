@@ -125,8 +125,9 @@ export namespace YASPP {
 		 * Optional Paths of css files to include in the site's pages.
 		 * The Urls are relative to the style root
 		 */
-		readonly sheets?: string | string[];
-		readonly classBindings?: string | string[];
+		readonly sheets?: string | ReadonlyArray<string>;
+		readonly classBindings?: string | ReadonlyArray<string>;
+		readonly themes: ReadonlyArray<string>;
 	}
 
 	type IYasppAssetsConfig = IYasppBaseConfig;
