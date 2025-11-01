@@ -128,6 +128,10 @@ export namespace YASPP {
 		readonly sheets?: string | ReadonlyArray<string>;
 		readonly classBindings?: string | ReadonlyArray<string>;
 		readonly themes: ReadonlyArray<string>;
+		/**
+		 * Defaults to `"light"`
+		 */
+		readonly theme?: string;
 	}
 
 	type IYasppAssetsConfig = IYasppBaseConfig;
