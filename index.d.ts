@@ -136,6 +136,13 @@ export namespace YASPP {
 
 	type IYasppAssetsConfig = IYasppBaseConfig;
 
+	interface IYasppGlobalFile {
+		readonly source: string;
+		readonly dest: string;
+	}
+	interface IYasppGlobalsConfig {
+		readonly files: ReadonlyArray<IYasppGlobalFile>;
+	}
 	/**
 	 * Project configuration file
 	 */
@@ -154,6 +161,7 @@ export namespace YASPP {
 		readonly locale: IYasppLocaleConfig;
 		readonly style?: IYasppStyleConfig;
 		readonly assets?: IYasppAssetsConfig;
+		readonly globals?: IYasppGlobalsConfig;
 	}
 
 }
